@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lightbox</title>
+<style>
+  .lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    overflow: auto;
+  }
+  .lightbox img {
+    display: block;
+    margin: auto;
+    margin-top: 10%;
+    max-width: 80%;
+    max-height: 80%;
+  }
+  .button-container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  .button-container button {
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .button-container button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+</style>
+</head>
+<body>
+<div class="gallery">
+  <img src="/images/wedding/wedding1.jpg" alt="Image 1" style= width:100% onclick="openLightbox('/images/wedding/wedding1.jpg')">
+  <img src="/images/wedding/wedding2.jpg" alt="Image 1" style= width:100% onclick="openLightbox('/images/wedding/wedding2.jpg')"  <!-- Προσθέστε περισσότερες εικόνες όπως επιθυμείτε -->
+</div>
+
+<div id="myLightbox" class="lightbox" onclick="closeLightbox()">
+  <div class="button-container">
+    <button onclick="prevImage()">&lt;</button>
+    <button onclick="downloadImage()">Κατέβασμα</button>
+    <button onclick="nextImage()">&gt;</button>
+    <button onclick="closeLightbox()">Κλείσιμο</button>
+  </div>
+  <img id="lightboxImage" src="/images/wedding/wedding1.jpg" alt="Lightbox Image">
+</div>
+
+<script>
+var images = []; // Λίστα με τις διευθύνσεις των εικόνων
+var currentIndex = 0; // Ο τρέχον δείκτης της εικόνας που βρίσκεται σε προβολή
+
+function openLightbox(imageSrc) {
+  var lightbox = document.getElementById("myLightbox");
+  var image = document.getElementById("lightboxImage");
+  image.src = imageSrc;
+  currentIndex = images.indexOf(imageSrc);
+  lightbox.style.display = "block";
+}
+
+function closeLightbox() {
+  var lightbox = document.getElementById("myLightbox");
+  lightbox.style.display = "none";
+}
+
+function downloadImage() {
+  var imageSrc = document.getElementById("lightboxImage").src;
+  var link = document.createElement('a');
+  link.href = imageSrc;
+  link.download = 'image';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+
+function nextImage() {
+  currentIndex = (currentIndex + 1) % images.length;
+  var imageSrc = images[currentIndex];
+  document.getElementById("lightboxImage").src = imageSrc;
+}
+
+function prevImage() {
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  var imageSrc = images[currentIndex];
+  document.getElementById("lightboxImage").src = imageSrc;
+}
+
+// Αρχικοποίηση της λίστας με τις εικόνες
+var galleryImages = document.querySelectorAll('.gallery img');
+galleryImages.forEach(function(image) {
+  images.push(image.src);
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head th:replace="~{../fragments/head :: head}"></head>
+    <body>
+    <header th:replace="~{../fragments/header :: header}"></header>
+
+    <div id="sidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="/index">Home</a>
+            <a href="/work">Work</a>
+            <a href="/contact">Contact</a>
+<!--            <a href="/login">Log-in</a>-->
+        </div>
+        <div class="background"></div>
+        <div class="container">
+            <div class="gallery">
+
+                <div class="gallery-item">
+                    <img class="gallery-image" src="wedding/wedding1.jpg" loading="lazy" onclick="openLightbox('wedding/wedding1.jpg')">
+                </div>
+
+                <div class="gallery-item">
+                    <img class="gallery-image" src="wedding/wedding2.jpg" loading="lazy" onclick="openLightbox('wedding/wedding2.jpg')">
+                </div>
+
+                <div class="gallery-item">
+                    <img class="gallery-image" src="wedding/wedding3.jpg" loading="lazy" onclick="openLightbox('wedding/wedding3.jpg')">
+                </div>
+
+                <div class="gallery-item">
+                    <img class="gallery-image" src="wedding/wedding4.jpg" loading="lazy" onclick="openLightbox('wedding/wedding4.jpg')">
+                </div>
+
+                <div class="gallery-item">
+                    <img class="gallery-image" src="wedding/wedding5.jpg" loading="lazy" onclick="openLightbox('wedding/wedding5.jpg')">
+                </div>
+
+                <div class="gallery-item">
+                    <img class="gallery-image" src="wedding/wedding6.jpg" loading="lazy" onclick="openLightbox('wedding/wedding6.jpg')">
+                </div>
+
+                <div class="gallery-item">
+                    <img class="gallery-image" src="wedding/wedding7.jpg" loading="lazy" onclick="openLightbox('wedding/wedding7.jpg')">
+                </div>
+
+                <div class="gallery-item">
+                    <img class="gallery-image" src="wedding/wedding8.jpg" loading="lazy" onclick="openLightbox('wedding/wedding8.jpg')">
+                </div>
+                <div class="gallery-item">
+                    <img class="gallery-image" src="wedding/wedding9.jpg" loading="lazy" onclick="openLightbox('wedding/wedding9.jpg')">
+                </div>
+
+            </div>
+        </div>
+        <div id="myLightbox" class="lightbox">
+            <span class="close" onclick="closeLightbox()">&times;</span>
+            <img id="lightboxImage" src="" alt="Lightbox Image">
+            <div class="prev" onclick="changeImage(-1)">&#10094;</div>
+            <div class="next" onclick="changeImage(1)">&#10095;</div>
+        </div>
+        <footer th:replace="~{../fragments/footer :: footer}"></footer>
+
+        <script src="javascript/script.js"></script>
+        <script>
+
+            var currentImageIndex = 0;
+            var images = [];
+
+            for (var i = 1; i <= 9; i++) {
+                images.push("wedding/wedding" + i + ".jpg");
+            }
+
+            function openLightbox(imageSrc) {
+                var lightbox = document.getElementById("myLightbox");
+                var image = document.getElementById("lightboxImage");
+                image.src = imageSrc;
+                lightbox.style.top = "0";
+                image.classList.remove('hidden'); /* Αφαίρεση της κλάσης hidden */
+
+                // Εδώ ενημερώνουμε την currentImageIndex
+                currentImageIndex = images.indexOf(imageSrc);
+            }
+
+            function closeLightbox() {
+                var lightbox = document.getElementById("myLightbox");
+                var image = document.getElementById("lightboxImage");
+                lightbox.style.top = "-100%";
+                image.classList.add('hidden'); /* Προσθήκη της κλάσης hidden */
+
+            }
+
+            function changeImage(n) {
+                currentImageIndex += n;
+                if (currentImageIndex >= images.length) {
+                    currentImageIndex = 0;
+                } else if (currentImageIndex < 0) {
+                    currentImageIndex = images.length - 1;
+                }
+                var image = document.getElementById("lightboxImage");
+                image.src = images[currentImageIndex];
+            }
+        </script>
+    </body>
+</html>

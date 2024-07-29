@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Photokinisi</title>
+  <link rel="icon" type="image" href="images/Logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel ="stylesheet" href="styles.css" >
+
+</head>
+
+<body>
+<div class="container">
+  <header class = "headerContainer">
+    <a class="logo" href="index.html"><img src="images/Logo.png" alt="logo"/></a>
+    <h2 class="company">Photokinisi</h2>
+    <p class="tagline">“Photography is the story I fail to put into words” Destin Sparks</p>
+  </header>
+  <div class= "center">
+        <aside>
+            <span class="menuButton" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; menu</span>
+            <div id="sidenav" class="sidenav">
+                <a href="javascript:void(5)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="index.html">Αρχική</a>
+                <button class="dropdown-btn">Πορτφόλιο 
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-container">
+                  <a href="wedding.html">Γάμος</a>
+                  <a href="baptism.html">Βάφτιση</a>
+                  <a href="event.html">Εκδήλωση</a>
+                  <a href="drone.html">Λήψη με drone</a>
+                </div>
+                <a href="contact.html">Επικοινωνία</a>
+                <a href="aboutUs.html">Σχετικά με εμάς</a>
+            </div>
+        </aside> 
+        <div id="main" class = "main">
+          <div class="row"> 
+            <div class="column">
+              <img src="images/wedding/wedding1.jpg" style="width:100%" onclick="openLightbox('images/wedding/wedding1.jpg')">
+              <img src="images/wedding/wedding2.jpg" style="width:100%" onclick="openLightbox('images/wedding/wedding2.jpg')">
+              <img src="images/wedding/wedding3.jpg" style="width:100%" onclick="openLightbox('images/wedding/wedding3.jpg')">
+              <img src="images/wedding/wedding4.jpg" style="width:100%" onclick="openLightbox('images/wedding/wedding4.jpg')">
+              <img src="images/wedding/wedding5.jpg" style="width:100%" onclick="openLightbox('images/wedding/wedding5.jpg')">
+              <img src="images/wedding/wedding6.jpg" style="width:100%" onclick="openLightbox('images/wedding/wedding6.jpg')">
+              <img src="images/wedding/wedding7.jpg" style="width:100%" onclick="openLightbox('images/wedding/wedding7.jpg')">
+            </div>
+            <div class="column">
+              <img src="images/wedding/wedding8.jpg" style="width:100%" onclick="openLightbox('images/wedding/wedding8.jpg')">
+              <img src="images/wedding/wedding9.jpg" style="width:100%" onclick="openLightbox('images/wedding/wedding9.jpg')">
+              <img src="images/wedding/wedding10.jpg" style="width:100%" onclick="openLightbox('images/wedding/wedding10.jpg')">
+              <img src="images/wedding/wedding11.jpg" style="width:100%" onclick="openLightbox('images/wedding/wedding11.jpg')">
+              <img src="images/wedding/wedding12.jpg" style="width:100%" onclick="openLightbox('images/wedding/wedding12.jpg')">
+              <img src="images/wedding/wedding13.jpg" style="width:100%" onclick="openLightbox('images/wedding/wedding13.jpg')"> 
+            </div>  
+            <div class="column">
+              <img src="images/wedding/wedding14.jpg" style="width:100%" onclick="openLightbox('images/wedding/wedding14.jpg')">
+              <img src="images/wedding/wedding15.jpg" style="width:100%" onclick="openLightbox('images/wedding/wedding15.jpg')">
+              <img src="images/wedding/wedding16.jpg" style="width:100%" onclick="openLightbox('images/wedding/wedding16.jpg')">
+              <img src="images/wedding/wedding17.jpg" style="width:100%" onclick="openLightbox('images/wedding/wedding17.jpg')">
+              <img src="images/wedding/wedding18.jpg" style="width:100%" onclick="openLightbox('images/wedding/wedding18.jpg')">
+              <img src="images/wedding/wedding19.jpg" style="width:100%" onclick="openLightbox('images/wedding/wedding19.jpg')"> 
+              <img src="images/wedding/wedding20.jpg" style="width:100%" onclick="openLightbox('images/wedding/wedding20.jpg')">
+            </div>
+            <div class="column">
+              <img src="images/wedding/wedding21.jpg" style="width:100%" onclick="openLightbox('images/wedding/wedding21.jpg')">
+              <img src="images/wedding/wedding22.jpg" style="width:100%" onclick="openLightbox('images/wedding/wedding22.jpg')">
+              <img src="images/wedding/wedding23.jpg" style="width:100%" onclick="openLightbox('images/wedding/wedding23.jpg')">
+              <img src="images/wedding/wedding24.jpg" style="width:100%" onclick="openLightbox('images/wedding/wedding24.jpg')">
+              <img src="images/wedding/wedding25.jpg" style="width:100%" onclick="openLightbox('images/wedding/wedding25.jpg')">
+              <img src="images/wedding/wedding26.jpg" style="width:100%" onclick="openLightbox('images/wedding/wedding26.jpg')">
+            </div>
+          </div>
+          
+        </div>
+        <div id="myLightbox" class="lightbox">
+          <span class="close" onclick="closeLightbox()">&times;</span>
+          <img id="lightboxImage" src="" alt="Lightbox Image">
+          <div class="prev" onclick="changeImage(-1)">&#10094;</div>
+          <div class="next" onclick="changeImage(1)">&#10095;</div>
+        </div>
+        
+            
+  </div>
+  <footer>
+    <div class="first-column">
+      <div class="social">
+        
+        <div class="facebook"><a href="https://www.facebook.com/bagia.tsioumpanoudi"><img src="images/facebook.png" alt="facebook"></a></div>
+        <div class="instagram"><a href="https://www.instagram.com/bagia_tsiompanoudi/"><img src="images/instagram.png" alt="instagram"></a></div>
+      </div>
+    </div>
+    <div class="second-column">
+      <h3>&copy; Photokinisi 2024</h3>
+    </div>
+    
+    <div class="third-column"><a href="mailto:tsioumpanoudesg13@gmail.com" target="_blank">Σχεδιαση: Tsioba</a></div>
+  </footer>
+</div>
+
+<script>
+  /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+  var dropdown = document.getElementsByClassName("dropdown-btn");
+  var i;
+
+  var currentImageIndex = 0;
+  var images = [];
+
+  for (var i = 1; i <= 26; i++) {
+    images.push("images/wedding/wedding" + i + ".jpg");
+  }
+
+
+  for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+      } else {
+        dropdownContent.style.display = "block";
+      }
+    });
+  }
+
+  function openNav() {
+    document.getElementById("sidenav").style.width = "200px";
+    document.getElementById("main").style.marginLeft = "200px";
+  }
+
+  function closeNav() {
+    document.getElementById("sidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+  }
+
+  function openLightbox(imageSrc) {
+    var lightbox = document.getElementById("myLightbox");
+    var image = document.getElementById("lightboxImage");
+    image.src = imageSrc;
+    lightbox.style.top = "0";
+    image.classList.remove('hidden'); /* Αφαίρεση της κλάσης hidden */
+
+    // Εδώ ενημερώνουμε την currentImageIndex
+    currentImageIndex = images.indexOf(imageSrc);
+  }
+
+  function closeLightbox() {
+    var lightbox = document.getElementById("myLightbox");
+    var image = document.getElementById("lightboxImage");
+    lightbox.style.top = "-100%";
+    image.classList.add('hidden'); /* Προσθήκη της κλάσης hidden */
+
+  }
+
+  function changeImage(n) {
+    currentImageIndex += n;
+    if (currentImageIndex >= images.length) {
+      currentImageIndex = 0;
+    } else if (currentImageIndex < 0) {
+      currentImageIndex = images.length - 1;
+    }
+    var image = document.getElementById("lightboxImage");
+    image.src = images[currentImageIndex];
+  }
+</script>
+</body>
+
+
+</html>

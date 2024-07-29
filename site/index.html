@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Photokinish</title>
+  <link rel="icon" type="image" href="images/Logo.png">
+  <link rel ="stylesheet" href="styles.css" >
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body onload="autoSlides()">
+
+  <div class="container">
+    <header class = "headerContainer">
+      <a class="logo" href="index.html"><img src="images/Logo.png"/></a>
+      <h2 class="company">Photokinisi</h2>
+      <p class="tagline">“Photography is the story I fail to put into words” Destin Sparks</p>
+    </header>
+    <div class= "center">
+          <aside>
+              <span class="menuButton" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; menu </span>
+              <div id="sidenav" class="sidenav">
+                  <a href="javascript:void(5)" class="closebtn" onclick="closeNav()">&times;</a>
+                  <a href="index.html">Αρχική</a>
+                  <button class="dropdown-btn">Πορτφόλιο 
+                    <i class="fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-container">
+                    <a href="wedding.html">Γάμος</a>
+                    <a href="baptism.html">Βάφτιση</a>
+                    <a href="event.html">Εκδήλωση</a>
+                    <a href="drone.html">Λήψη με drone</a>
+                  </div>
+                  <a href="contact.html">Επικοινωνία</a>
+                  <a href="aboutUs.html">Σχετικά με εμάς</a>
+              </div>
+          </aside> 
+          <div id="main" class = "main">
+                      
+
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+
+              <!-- Full-width images with number and caption text -->
+              <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="images/index/index1.jpg" style="width:100%">
+                
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="images/index/index2.jpg" style="width:100%">
+                
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="images/index/index3.jpg" style="width:100%">
+                
+              </div>
+
+              <!-- Next and previous buttons -->
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <p class="us"><strong>Λίγα λόγια για εμάς...</strong><br><br>Είμαστε δύο αδέλφια, ο Σάκης και η Βάγια, που δραστηριοποιούμαστε στο χώρο της φωτογραφίας από το 1990. <a href="contact.html" class="contactWithUs">Επικοινωνήστε μαζί μας</a> ή επισκεφτείτε το κατάστημά μας στην οδό Βασ. Γεωργίου 193, στο Σουφλί. Θα χαρούμε πολύ να σας εξυπηρετήσουμε.</p>
+            <div class="map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d750.574433167043!2d26.30407346962161!3d41.19348209820786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b251462eb696ad%3A0xcd8767a48363f56c!2zzpLOsc-DLiDOk861z4nPgc6zzq_Ov8-FIDE5MywgzqPOv8-Fz4bOu86vIDY4NCAwMA!5e0!3m2!1sel!2sgr!4v1710862271339!5m2!1sel!2sgr"  height="250px"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            
+
+            <div class="activity">
+              <h1 class="activityTitle"> <span>Δραστηριότητες</span></h1>
+              <div class="activityGrid">
+                <div class="activityColumn">
+                  <h1 class="activityTitle"> Φωτογραφία </h1>
+                  <div class="photoWraper">
+                    <ul class="PhotoList">
+                      <li>Κοινωνικών Εκδηλώσεων – Συνεδριών</li>
+                      <li>Γάμων – Βαπτίσεων – Δεξιώσεων</li>
+                      <li>Θεατρικές Παραστάσεις</li>
+                      <li>Προϊόντων E-shop</li>
+                      <li>Drone Photography</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="activityColumn">
+                  <h1 class="activityTitle"> Ψηφιακή Επεξεργασία </h1>
+                    <div class="editWraper">
+                      <ul class="EditList">
+                        <li>Διόρθωση Ατελειών – Retouch</li>
+                        <li>Τονική – Χρωματική Διόρθωση</li>
+                        <li>Αλλαγή background (φόντου)</li>
+                        <li>Αντιγραφή – Ένθεση</li>
+                        <li>Δημιουργία Ψηφιακού Άλμπουμ</li>
+                      </ul>
+                    </div>
+                </div>
+                <div class="activityColumn">
+                  <h1 class="activityTitle"> Παραγωγή Βίντεο </h1>
+                  <div class="videoWraper">
+                    <ul class="VideoList">
+                      <li>Κοινωνικών Εκδηλώσεων</li>
+                      <li>Γάμων – Βαπτίσεων</li>
+                      <li>Drone Video</li>
+                      <li>Video Graphics</li>
+                      <li>Δημιουργία DVD</li>
+                    </ul>
+                  </div>
+                </div>
+              </div> 
+            </div>
+            
+          
+      </div> 
+    </div>
+    <footer>
+      <div class="first-column">
+        <div class="social">
+          
+          <div class="facebook"><a href="https://www.facebook.com/bagia.tsioumpanoudi"><img src="images/facebook.png" alt="facebook"></a></div>
+          <div class="instagram"><a href="https://www.instagram.com/bagia_tsiompanoudi/"><img src="images/instagram.png" alt="instagram"></a></div>
+        </div>
+      </div>
+      <div class="second-column">
+        <h3>&copy; Photokinisi 2024</h3>
+      </div>
+      
+      <div class="third-column"><a href="mailto:tsioumpanoudesg13@gmail.com" target="_blank">Σχεδιαση: Tsioba</a></div>
+    </footer>
+  </div>
+
+  <script>
+      /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+      
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var dropdownContent = this.nextElementSibling;
+          if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+          } else {
+            dropdownContent.style.display = "block";
+          }
+        });
+      }
+
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      // Next/previous controls
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      // Thumbnail image controls
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        
+        slides[slideIndex-1].style.display = "block";
+       
+      }
+
+      // var slideIndex = 0;
+
+        function autoSlides() {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          
+          // Κρύψτε όλες τις εικόνες
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+  
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1} // Επιστροφή στην πρώτη εικόνα αν έχουμε φτάσει στο τέλος
+          
+          // Εμφάνιση της τρέχουσας εικόνας
+          slides[slideIndex-1].style.display = "block";
+          
+          // Κάλεσμα της συνάρτησης κάθε 4 δευτερόλεπτα
+          setTimeout(autoSlides, 4000); // Αλλαγή κάθε 4 δευτερόλεπτα
+        }
+
+
+      function openNav() {
+      document.getElementById("sidenav").style.width = "200px";
+      document.getElementById("main").style.marginLeft = "200px";
+      }
+
+      function closeNav() {
+      document.getElementById("sidenav").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+      }
+
+  </script>
+</body>
+
+
+</html>

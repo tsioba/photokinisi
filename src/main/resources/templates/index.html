@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head th:replace="~{../fragments/head :: head}"></head>
+    <body>
+        <!-- the header -->
+        <header th:replace="~{../fragments/header :: header}"></header>
+
+        <div id="sidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="/index">Home</a>
+            <a href="/work">Work</a>
+            <a href="/contact">Contact</a>
+<!--            <a href="/login">Log-in</a>-->
+        </div>
+
+        <div class="slider" id="slider" >
+            <div class="slider__content" id="slider-content">
+                <div class="slider__images">
+                    <div class="slider__images-item slider__images-item--active" data-id="1"><img src="./images/image3.jpg"/></div>
+                    <div class="slider__images-item" data-id="2"><img src="images/image2.jpg"/></div>
+                    <div class="slider__images-item" data-id="3"><img src="images/image1.jpg"/></div>
+                    <div class="slider__images-item" data-id="4"><img src="images/image4.jpg"/></div>
+                    <div class="slider__images-item" data-id="5"><img src="images/image5.jpg"/></div>
+                </div>
+            </div>
+            <div class="slider__nav">
+                <div class="slider__nav-arrows">
+                    <div class="slider__nav-arrow slider__nav-arrow--left" id="left">to left</div>
+                    <div class="slider__nav-arrow slider__nav-arrow--right" id="right">to right</div>
+                </div>
+                <div class="slider__nav-dots" id="slider-dots">
+                    <div class="slider__nav-dot slider__nav-dot--active" data-id="1"></div>
+                    <div class="slider__nav-dot" data-id="2"></div>
+                    <div class="slider__nav-dot" data-id="3"></div>
+                    <div class="slider__nav-dot" data-id="4"></div>
+                    <div class="slider__nav-dot" data-id="5"></div>
+                </div>
+            </div>
+        </div>
+        <script  src="javascript/index.js"></script>
+    </body>
+</html>

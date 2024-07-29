@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="~{../fragments/head :: head}"></head>
+
+    <body>
+        <header th:replace="~{../fragments/header :: header(extended=false)}"></header>
+        <main>
+            <h1>Error <span th:text="${status}"></span></h1>
+            <p th:text="${message}"></p>
+
+        </main>                                                  -->
+        <footer th:replace="~{../fragments/footer :: footer}"></footer>
+    </body>
+</html>
