@@ -36,13 +36,13 @@ public class AuthController {
         return "register";
     }
 
-    @PostMapping("/register")
-    public String registerUser(@ModelAttribute("user") @Valid User user, BindingResult result) {
-        if (result.hasErrors()) {
-            return "register";
-        }
-
-        authService.registerUser(user);
-        return "redirect:/login";
-    }
+//    @PostMapping("/register")
+//    public String registerUser(@ModelAttribute("user") @Valid User user, BindingResult result) {
+//        if (result.hasErrors()) {
+//            return "register";
+//        }
+//
+//        authService.registerUser(user);
+//        return "redirect:/login";
+//    }
 }
